@@ -1,23 +1,14 @@
 import java.util.Arrays;
 
 public class Vector {
-    // -------------------------------
-    // Attributes
-    // -------------------------------
-    private double[] components;
-    // Represents the vector elements <x1, x2, ..., xn>
 
-    // -------------------------------
-    // Constructor
-    // -------------------------------
-    public Vector(double[] components) {
+    private double[] components;
+ public Vector(double[] components) {
         // Defensive copy to avoid aliasing
         this.components = Arrays.copyOf(components, components.length);
     }
 
-    // -------------------------------
-    // Getters
-    // -------------------------------
+ 
     public int getDimension() {
         return components.length;   // n
     }
@@ -29,9 +20,7 @@ public class Vector {
         return components[i];
     }
 
-    // -------------------------------
-    // Vector Operations
-    // -------------------------------
+
     public double magnitude() {
         double sum = 0;
         for (double c : components) {
@@ -67,9 +56,7 @@ public class Vector {
         return result;
     }
 
-    // -------------------------------
-    // Utility
-    // -------------------------------
+ 
     private void checkDimension(Vector v) {
         if (this.getDimension() != v.getDimension()) {
             throw new IllegalArgumentException("Vectors must have same dimension.");
@@ -83,9 +70,7 @@ public class Vector {
                 .replace("]", "") + ">";
     }
 
-    // -------------------------------
-    // Main for testing
-    // -------------------------------
+  
     public static void main(String[] args) {
         Vector v2D = new Vector(new double[]{3, 4});
         Vector v3D = new Vector(new double[]{5, -2, 3});
