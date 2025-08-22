@@ -4,7 +4,6 @@ public class Vector {
 
     private double[] components;
  public Vector(double[] components) {
-        // Defensive copy to avoid aliasing
         this.components = Arrays.copyOf(components, components.length);
     }
 
